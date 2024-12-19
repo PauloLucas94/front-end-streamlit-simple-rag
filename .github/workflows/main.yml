@@ -26,4 +26,4 @@ jobs:
       - name: Run Streamlit App
         run: |
           export MY_SERVER_IP=${{ secrets.MY_SERVER_IP }}
-          streamlit run app.py
+          streamlit run streamlit.py
