@@ -6,7 +6,7 @@ import os
 # URL da sua API
 API_URL = "http://35.174.95.87"#os.getenv('API_URL') # IP que funcionou no curl
 
-st.title("Fabrica de Cursos Eletroeletrônica - Chatbot")
+st.title("Assistente da Fabrica de Cursos - Metalmecânica")
 
 # Entrada do usuário
 user_input = st.text_input("Digite dados sobre o curso desejado:")
