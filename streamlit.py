@@ -4,7 +4,7 @@ import requests
 import os
 
 # URL da sua API
-API_URL = "http://35.174.95.87" #os.getenv('MY_SERVER_IP')# IP que funcionou no curl
+API_URL = os.getenv('MY_SERVER_IP')# IP que funcionou no curl "http://35.174.95.87"
 
 st.title("Assistente da Fabrica de Cursos - Metalmecânica")
 
