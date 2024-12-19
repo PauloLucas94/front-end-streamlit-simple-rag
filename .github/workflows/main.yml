@@ -1,4 +1,4 @@
-name: Workflow
+name: Deploy Application
 
 on:
   push:
@@ -6,12 +6,24 @@ on:
       - main
 
 jobs:
-  example:
+  deploy:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
-      
-      - name: Use secret IP address
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
         run: |
-          echo "O IP público é ${{ secrets.MY_SERVER_IP }}"
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Run Streamlit App
+        run: |
+          export MY_SERVER_IP=${{ secrets.MY_SERVER_IP }}
+          streamlit run app.py
