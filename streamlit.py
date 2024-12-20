@@ -3,6 +3,9 @@ from dotenv import load_dotenv
 import requests
 import os
 
+# Carregar variáveis do arquivo .env
+load_dotenv()
+
 
 # URL da sua API
 API_URL = os.getenv('API_URL')# IP que funcionou no curl #"http://35.174.95.87" 
