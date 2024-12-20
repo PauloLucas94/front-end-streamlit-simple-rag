@@ -1,0 +1,17 @@
+name: Workflow
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  example:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      
+      - name: Use secret IP address
+        run: |
+          echo "O IP público é ${{ secrets.API_URL }}"
