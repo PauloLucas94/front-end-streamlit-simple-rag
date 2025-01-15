@@ -22,7 +22,7 @@ if st.button("Enviar"):
             payload = {"question": user_input}  # Mesma estrutura do curl
 
             # Fazer a requisição POST
-            response = requests.post(API_URL, headers=headers, json=payload, timeout=60)
+            response = requests.post(API_URL, headers=headers, json=payload, timeout=120)
             
             # Verificar status da resposta
             if response.status_code == 200:
