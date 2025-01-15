@@ -9,7 +9,7 @@ load_dotenv()
 # URL da sua API
 API_URL = os.getenv('API_URL')
 
-st.title("Assistente da Fabrica de Cursos - Metalmecânica")
+st.title("Assistente da Fábrica de Cursos - Metalmecânica")
 
 # Entrada do usuário
 user_input = st.text_input("Digite dados sobre o curso desejado:")
