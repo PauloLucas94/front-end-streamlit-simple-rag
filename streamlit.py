@@ -9,10 +9,10 @@ load_dotenv()
 # URL da sua API
 API_URL = os.getenv('API_URL')
 
-st.title("Assistente Fábrica de Cursos - Eletrônica Industrial")
+st.title("Assistente ERP - Banco de Dados")
 
 # Entrada do usuário
-user_input = st.text_input("Digite dados sobre o curso desejado:")
+user_input = st.text_input("Digite suas dúvidas:")
 
 if st.button("Enviar"):
     if user_input:
